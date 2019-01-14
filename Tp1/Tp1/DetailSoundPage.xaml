@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tp1.DetailSoundPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Sound.Title}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Sound.Character}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Sound.Episode}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding IsBusy}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="Red"></ActivityIndicator>
+            <Button Text="" Command="{Binding PlaySampleCommand}"></Button>
+            <Button Text="Share" Command="{Binding ShareSample}"></Button>
+            <Button Text="Play Title" Command="{Binding SayTitleCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,10 +1,7 @@
-﻿using System;
-
+﻿
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 namespace Tp1.Droid
@@ -19,6 +16,11 @@ namespace Tp1.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            
+            UserDialogs.Init(this);
+
             LoadApplication(new App());
         }
     }
